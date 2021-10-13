@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <style>
+        body{
+            background-image: url(bg1.jpg);
+            background-size: cover;
+            background-blend-mode: soft-light;
+            background-repeat: no-repeat;
+        }
+        h1{
+            text-align: center;
+            color: black;
+            text-shadow: 1px 1px white,-1px 0px white,0px -1px white;
+        }
+        .form{
+            box-sizing: border-box;
+            border: 2px solid black;
+            padding: 10px;
+            width: 50%;
+            margin-left: 25%;
+            background-image: url(bg2.jpg);
+            background-size: cover;
+            background-blend-mode: lighten;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 5px white;
+        }
+        input,select{
+            width: 300px;
+            box-sizing: border-box;
+            margin: 15px;
+        }
+        textarea{
+            width: 100%;
+            margin: 10px;
+            align-items: center;
+        }
+        button{
+            width: 35%;
+            box-sizing: border-box;
+            align-items: center ;
+            margin-left: 10%;
+        }
+        input[type="search"]{
+            -webkit-appearance: none;
+            appearance: none;
+            margin-left: 23%;
+            width: 50%;
+            height: 24px;
+            border-style: hidden;
+        }
+        input[type="text"]:hover,input[type="tel"]:hover,input[type="email"]:hover,input[type="url"]:hover,input[type="number"]:hover,input[type="date"]:hover,input[type="time"]:hover,input[type="color"]:hover,select:hover{
+            border-radius: 5px;
+            box-shadow: inset 1px 1px 1px 1px white;
+        }
+        fieldset{
+            position: relative;
+            margin: 5px;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid grey;
+            border-bottom: 2px solid grey;
+        }
+        legend{
+            position: absolute;
+            top: 0.5;
+            left: 0.5;
+            border: 2px solid rgb(151, 150, 150);
+        }
+        legend:hover{
+            box-shadow: inset 1px 1px 1px 1px white;
+            color: rgba(0, 0, 0, 0.671);
+        }
+        fieldset:hover{
+            box-shadow: inset 1px 1px 1px 1px white;
+                }
+        select,input[type="color"],textarea,legend{
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid grey;
+            border-bottom: 2px solid grey;
+        }
+        input:invalid{
+            content: "X";
+            color: red;
+        }
+        input:out-of-range{
+            content: "X";
+            color: red;
+        }
+        .search{
+            /* border: 1px solid black; */
+            /* width: fit-content; */
+            height: 17px;
+            /* margin-top: 10px; */
+            /* float: left; */
+            
+        }
+        .bsearch{
+            /* border: 1px solid black; */
+            width: fit-content;
+            height: fit-content;
+            /* margin-top: 35px; */
+            /* float: left; */
+            margin-left: -20px;
+            background-color: white;
+            box-shadow: 2px 2px 2px 1px black;
+            border: 1px solid black;
+        }
+        .bsearch:hover{
+            box-shadow: 2px 2px 2px 1px black;
+            border: 2px solid black;
+        }
+        .bsearch:active{
+            background-color: white;
+            box-shadow: 2px 2px black;
+        }
+        label:hover{
+            color: rgba(0, 0, 0, 0.671);
+        }
+        .lab{
+            padding: 1px;
+            margin-left: 20px ;
+        }
+        .text{
+            display: flex;
+            justify-content: center;
+        }
+        textarea:hover{
+            box-shadow: inset 1px 1px 1px 1px grey;
+            border-radius: 5px;
+        }
+        .btn{
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid grey;
+            border-bottom: 2px solid grey;
+            background: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .btn:hover{
+            border-radius: 5px;
+            border: 2px solid black;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.5));
+            font-size: medium;
+        }
+        .btn:active{
+            border-radius: 5px;
+            border: 1px solid white;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.5));
+            box-shadow:0 0 5px 1px black;
+            text-shadow: 0.5px 0.5px white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Webpage</h1>
+    <div class="form">
+    <form>
+        <input type="search" placeholder="Search..">
+        <button class="bsearch" ><img class="search" src="https://img.icons8.com/search"></button>
+        <br>
+        <input type="text" style="background: none;" required>
+        <span class="lab"><label>Name</label></span><br>
+        <input type="email" style="background: none;">
+        <span class="lab"><label>Email</label></span><br>
+        <input type="tel" style="background: none;">
+        <span class="lab"><label>Phone Number</label></span>
+        <br>
+        <input type="url" style="background: none;">
+        <span class="lab"><label>LinkedIn</label></span>
+        <br>
+        <input type="number" min="1" max="100" style="background: none;">
+        <span class="lab"><label>Age</label></span>
+        <br>
+        <input type="date" style="background: none;">
+        <span class="lab"><label>Date of Birth</label></span>
+        <br>
+        <input type="time" style="background: none;">
+        <span class="lab"><label>Preffered Time to Study</label></span>
+        <br>
+        <input type="color" style="background: none;">
+        <span class="lab"><label>Favourite Color</label></span>
+        <br>
+        <input type="text" list="prod" style="background: none;">
+        <datalist id="prod">
+            <option>Individual</option>
+            <option>Team Work</option>
+        </datalist>
+        <span class="lab"><label>More Productive</label></span>
+        <br>
+        <!-- <select multiple size="2" style="background: none;"> -->
+        <select style="background: none;">
+            <optgroup label="Study">
+            <option>Online</option>
+            <option>Offline</option>
+        </optgroup>
+    <optgroup label="Work">
+        <option>Online</option>
+            <option>Offline</option>
+    </optgroup>
+        </select>
+        <span class="lab"><label>Preffered Mode</label></span>
+        <br>
+        <input type="range" min="1" max="10" step="1" value="5">
+        <span class="lab"><label>HTML</label></span>
+        <br>
+        <input type="range" min="1" max="10" step="1" value="5">
+        <span class="lab"><label>CSS</label></span>
+        <br>
+        <fieldset>
+            <legend>Area of Interest</legend>
+            <input type="radio" name="interest">
+            <label>Frontend Development</label>
+            <input type="radio" name="interest">
+            <label>Backend Development</label>
+            <input type="radio" name="interest">
+            <label>Fullstack Development</label>
+        </fieldset>
+        <fieldset>
+            <legend>Other Skills</legend>
+            <input type="checkbox">
+            <label>JavaScript</label>
+            <input type="checkbox">
+            <label>Java</label>
+            <input type="checkbox">
+            <label>C</label>
+            <input type="checkbox">
+            <label>C++</label>
+            <input type="checkbox">
+            <label>Python</label>
+            <input type="checkbox" >
+            <label>Others</label>
+        </fieldset>
+        <fieldset>
+            <legend>Familiar with</legend>
+            <input type="checkbox">
+            <label>Progress Bar <progress max="100" value="75"></progress></label>
+            <input type="checkbox">
+            <label>Meter Bar <meter min="0" max="100" low="30" high="70" optimum="50" value="50"></meter></label>
+        </fieldset>
+        <div class="text">
+        <textarea style="opacity: 50%;;" placeholder="Any Comments.."></textarea>
+        </div>
+        <div>
+        <button type="submit" class="btn">Submit</button>
+        <button type="reset" class="btn">Reset</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
